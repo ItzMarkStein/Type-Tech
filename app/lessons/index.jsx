@@ -12,7 +12,7 @@ export default function LessonsScreen() {
 
   return (
     <ImageBackground
-          source={{ uri: "https://imgur.com/uXuJlj9.jpg" }} // 🔹 replace with your image (URL or require("../assets/bg.png"))
+          source={{ uri: "https://imgur.com/uXuJlj9.jpg" }} 
           style={styles.background}
           resizeMode="cover"
         >
@@ -40,9 +40,11 @@ const styles = StyleSheet.create({
     flex:1 ,
   },
   container: { 
+    alignItems: "center",
     flex: 1, 
-    padding: 20, 
-    backgroundColor: "rgba(26, 26, 26, 0.53)" },
+    padding: 50, 
+    backgroundColor: "rgba(26, 26, 26, 0.53)" 
+  },
   header: {
     fontSize: 50,
     fontWeight: "bold",
@@ -52,12 +54,14 @@ const styles = StyleSheet.create({
     marginTop: 45,
   },
   card: {
-    padding: 18,
+    marginBottom: 30,
+    padding: 15,
     marginVertical: 10,
-    backgroundColor: "rgba(26, 26, 26, 0.53)",
-    borderRadius: 12,
+    backgroundColor: "rgba(26, 26, 26, 0.7)",
+    borderRadius: 10,
     borderWidth: 1,
-    borderColor: "#ffffffff",
+    borderColor: "#777777ff",
+    width: 400,
   },
   title: { fontSize: 18, fontWeight: "600", color: "#fff" },
 });

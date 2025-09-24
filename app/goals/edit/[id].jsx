@@ -13,7 +13,7 @@ import { useLocalSearchParams, useRouter } from "expo-router";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { db } from "../../../firebaseConfig";
 
-const EditChessNote = () => {
+const EditTechNote = () => {
   const { id } = useLocalSearchParams();
   const router = useRouter();
   const [title, setTitle] = useState("");
@@ -76,7 +76,7 @@ const EditChessNote = () => {
                   resizeMode="cover"
                 >
     <View style={styles.container}>
-      <Text style={styles.header}>Edit Tech Notes</Text>
+      <Text style={styles.header}>Edit ⟲</Text>
 
       <View style={styles.card}>
         <TextInput
@@ -106,13 +106,14 @@ const EditChessNote = () => {
   );
 };
 
-export default EditChessNote;
+export default EditTechNote;
 
 const styles = StyleSheet.create({
   background : {
     flex:1 ,
   },
   container: {
+    alignItems: "center",
     flex: 1,
     backgroundColor: "rgba(26, 26, 26, 0.53)", 
     padding: 20,
@@ -126,6 +127,7 @@ const styles = StyleSheet.create({
     color: "#ffffffff", 
   },
   card: {
+    width: 450,
     backgroundColor: "rgba(35, 34, 43, 0.53)",
     borderRadius: 12,
     padding: 16,

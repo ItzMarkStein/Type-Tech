@@ -37,14 +37,7 @@ export default function RootLayout() {
           name="lessons/[id]/index" 
           options={{ headerShown: false }} 
         />
-        <Stack.Screen 
-          name="lessons/puzzles/index" 
-          options={{ headerShown: false }} 
-        />
-        <Stack.Screen 
-          name="lessons/puzzles/[id]/index" 
-          options={{ headerShown: false }} 
-        />
+        
 
         {}
         <Stack.Screen name="+not-found" />

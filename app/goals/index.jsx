@@ -17,7 +17,7 @@ import { collection, query, where, onSnapshot, doc, deleteDoc } from 'firebase/f
 import { useRouter } from 'expo-router';
 import { EllipsisVertical } from 'lucide-react-native'; 
 
-const ChessNotes = () => {
+const TechNotes = () => {
   const [goals, setGoals] = useState([]);
   const [menuVisible, setMenuVisible] = useState(null); 
   const router = useRouter();
@@ -41,28 +41,15 @@ const ChessNotes = () => {
     return unsubscribe;
   }, []);
 
-  const handleDelete = (id) => {
-    Alert.alert(
-      'Delete Note',
-      'Are you sure you want to delete this note?',
-      [
-        { text: 'Cancel', style: 'cancel' },
-        {
-          text: 'Delete',
-          style: 'destructive',
-          onPress: async () => {
-            try {
-              const docRef = doc(db, 'goals', id);
-              await deleteDoc(docRef);
-              console.log('Note deleted:', id);
-            } catch (error) {
-              console.log('Error deleting note:', error);
-            }
-          },
-        },
-      ]
-    );
-  };
+  const handleDelete = async (id) => {
+  try {
+    const docRef = doc(db, "goals", id);
+    await deleteDoc(docRef);
+    console.log("Deleted:", id);
+  } catch (error) {
+    console.error("Delete failed:", error.message);
+  }
+};
 
 
   const formatDate = (date) => {
@@ -91,7 +78,7 @@ const ChessNotes = () => {
           <View style={styles.noteCard}>
             <Text style={styles.noteTitle}>{item.title || 'Untitled Note'}</Text>
             <Text style={styles.noteDate}>
-              💎 Date created: {formatDate(item.createdAt)}
+              ➜ Date created: {formatDate(item.createdAt)}
             </Text>
 
             {}
@@ -104,42 +91,39 @@ const ChessNotes = () => {
 
             {}
             <Modal
-              visible={menuVisible === item.id}
-              transparent
-              animationType="fade"
-              onRequestClose={() => setMenuVisible(null)}
-            >
-              <Pressable 
-                style={styles.modalOverlay} 
-                onPress={() => setMenuVisible(null)}
-              >
-                <View style={styles.menuContainer}>
-                  <TouchableOpacity
-                    style={styles.menuItem}
-                    onPress={() => {
-                      setMenuVisible(null);
-                      router.push(`/goals/edit/${item.id}`);
-                    }}
-                  >
-                    <Text style={styles.menuText}>Edit</Text>
-                  </TouchableOpacity>
+            visible={menuVisible === item.id}
+            transparent
+            animationType="fade"
+            onRequestClose={() => setMenuVisible(null)}
+        >
+       <View style={styles.modalOverlay}>
+        <View style={styles.menuContainer}>
+        <TouchableOpacity
+        style={styles.menuItem}
+        onPress={() => {
+          setMenuVisible(null);
+          router.push(`/goals/edit/${item.id}`);
+        }}
+      >
+        <Text style={styles.menuText}>Edit</Text>
+      </TouchableOpacity>
 
-                  <TouchableOpacity
-                    style={styles.menuItem}
-                    onPress={() => {
-                      setMenuVisible(null);
-                      handleDelete(item.id);
-                    }}
-                  >
-                    <Text style={[styles.menuText, { color: '#f76f7aff' }]}>Delete</Text>
-                  </TouchableOpacity>
-                </View>
-              </Pressable>
-            </Modal>
+      <TouchableOpacity
+        style={styles.menuItem}
+        onPress={() => {
+          setMenuVisible(null);
+          handleDelete(item.id);
+        }}
+      >
+        <Text style={[styles.menuText, { color: '#f76f7aff' }]}>Delete</Text>
+      </TouchableOpacity>
+    </View>
+  </View>
+</Modal>
           </View>
         )}
         ListEmptyComponent={
-          <Text style={styles.emptyText}>This space need to fill up!</Text>
+          <Text style={styles.emptyText}>this is what space feels like!</Text>
         }
       />
 
@@ -151,13 +135,14 @@ const ChessNotes = () => {
   );
 };
 
-export default ChessNotes;
+export default TechNotes;
 
 const styles = StyleSheet.create({
   background : {
     flex:1 ,
   },
   container: {
+    alignItems: 'center',
     flex: 1,
     backgroundColor: 'rgba(26, 26, 26, 0.53)',
     paddingTop: 20,
@@ -171,6 +156,8 @@ const styles = StyleSheet.create({
     color: '#ffffffff',
   },
   noteCard: {
+    width: 300,
+    alignItems: 'center',
     backgroundColor: 'rgba(26, 26, 26, 0.53)',
     padding: 16,
     marginVertical: 8,
@@ -226,13 +213,14 @@ const styles = StyleSheet.create({
     color: '#aaa',
   },
   logoutBtn: {
+    width: 400,
     backgroundColor: '#141414ff',
     margin: 20,
     padding: 14,
     borderRadius: 10,
-    alignItems: 'center',
   },
   logoutText: {
+    textAlign: 'center',
     color: 'white',
     fontWeight: 'bold',
     fontSize: 16,

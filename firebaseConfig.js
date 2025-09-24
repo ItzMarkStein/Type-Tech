@@ -4,15 +4,14 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAz2px0m4v1rvKiE1h2aYxmboYOkIhaz3M",
-  authDomain: "type-tech-1c23a.firebaseapp.com",
-  projectId: "type-tech-1c23a",
-  storageBucket: "type-tech-1c23a.firebasestorage.app",
-  messagingSenderId: "73473797734",
-  appId: "1:73473797734:web:cede46b1bd171c61cfc7a7"
+  apiKey: "AIzaSyAB7sBhKUkUef-Eya7A8iDEXL1IJetknU0",
+  authDomain: "typetech-8b6f2.firebaseapp.com",
+  projectId: "typetech-8b6f2",
+  storageBucket: "typetech-8b6f2.firebasestorage.app",
+  messagingSenderId: "505183939122",
+  appId: "1:505183939122:web:eac4b185cff3ed377b6a2b"
 };
 
 const app = initializeApp(firebaseConfig);
-
 export const db = getFirestore(app)
 export const auth = getAuth(app)

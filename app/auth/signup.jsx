@@ -63,6 +63,7 @@ const styles = StyleSheet.create({
     flex:1 ,
   },
   container: {
+    alignItems: "center",
     flex: 1,
     backgroundColor: "rgba(26, 26, 26, 0.53)",
     justifyContent: "center",
@@ -82,20 +83,23 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   input: {
-    backgroundColor: "#2a2a2a",
+    backgroundColor: "#181818ff",
     color: "#fff",
     padding: 14,
     borderRadius: 10,
     marginBottom: 15,
     borderWidth: 1,
     borderColor: "#333",
+    width: 400,
+    alignItems: "center",
   },
   button: {
     backgroundColor: "#ffffffff",
-    padding: 16,
+    padding: 13,
     borderRadius: 12,
     alignItems: "center",
     marginBottom: 20,
+    width: 300,
   },
   buttonText: {
     color: "#1a1a1a",

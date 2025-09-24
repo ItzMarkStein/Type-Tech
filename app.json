@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Type Tech",
-    "slug": "type-tech",
+    "name": "TypeTech",
+    "slug": "typetech",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",

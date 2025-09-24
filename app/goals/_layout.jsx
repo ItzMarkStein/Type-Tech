@@ -56,7 +56,7 @@ export default function GoalsLayout() {
         <Tabs.Screen
           name="index"
           options={{
-            title: 'Chess Journal',
+            title: 'Tech Notes',
             tabBarIcon: ({ focused }) => (
               <Ionicons
                 size={24}
@@ -71,7 +71,7 @@ export default function GoalsLayout() {
         <Tabs.Screen
           name="create"
           options={{
-            title: 'New Note',
+            title: 'New Tech Note',
             tabBarIcon: ({ focused }) => (
               <Ionicons
                 size={24}

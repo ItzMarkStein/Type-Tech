@@ -37,7 +37,7 @@ const Create = () => {
 
   return (
     <ImageBackground
-              source={{ uri: "https://imgur.com/y5HZg3B.jpg" }}  // <--- How to Change Background as Image (Indian)
+              source={{ uri: "https://imgur.com/y5HZg3B.jpg" }}  // ◄ How to Change Background as Image (Indian Tutorial)
               style={styles.background}
               resizeMode="cover"
             >
@@ -47,7 +47,7 @@ const Create = () => {
         behavior={Platform.OS === "ios" ? "padding" : "height"}
       >
         <Text style={styles.header}>TypeTech</Text>
-        <Text style={styles.subtitle}>Create a Tech Note</Text>
+        <Text style={styles.subtitle}>Create a Tech Note!</Text>
 
         <View style={styles.card}>
           <TextInput
@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   card: {
-    width: "100%",
+    width: 700,
     minHeight: 140,
     backgroundColor: "#2a2a2a", // burst fade parin to ya
     borderRadius: 12,
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     padding: 6,
   },
   button: {
-    width: "100%",
+    width: 400,
     padding: 16,
     backgroundColor: "#ffffffff", 
     borderRadius: 10,

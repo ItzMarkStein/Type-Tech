@@ -1,4 +1,4 @@
-// app/auth/login.jsx
+
 import { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, ImageBackground } from "react-native";
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -14,7 +14,7 @@ export default function Login() {
     try {
       await signInWithEmailAndPassword(auth, email, password);
 
-      // ✅ Go to home (index.jsx inside /app/)
+
       router.replace("/");  
     } catch (err) {
       setError(err.message);
@@ -29,7 +29,7 @@ export default function Login() {
     >
       <View style={styles.container}>
         <Text style={styles.title}> TypeTech </Text>
-        <Text style={styles.subtitle}>Log In To Your Account!</Text>
+        <Text style={styles.subtitle}>Login to your account!</Text>
 
         <TextInput
           style={styles.input}
@@ -63,8 +63,11 @@ export default function Login() {
 }
 
 const styles = StyleSheet.create({
-  background: { flex: 1 },
+  background: { 
+    flex: 1 
+  },
   container: {
+    alignItems: "center",
     flex: 1,
     backgroundColor: "rgba(26, 26, 26, 0.53)",
     justifyContent: "center",
@@ -91,13 +94,15 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     borderWidth: 1,
     borderColor: "#1d1d1d",
+    width: 400,
   },
   button: {
     backgroundColor: "#fff",
-    padding: 16,
+    padding: 13,
     borderRadius: 12,
     alignItems: "center",
     marginBottom: 20,
+    width: 300,
   },
   buttonText: {
     color: "#0a0a0a",

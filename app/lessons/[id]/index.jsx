@@ -4,7 +4,7 @@ import { useLocalSearchParams } from "expo-router";
 
 const lessonsContent = {
   "1": {
-    title: "What is TypeTech?",
+    title: "TypeTech Q&A",
     content:
       "What is TypeTech?\n\n" +
       "TypeTech is a submitting note app,\n" +
@@ -13,7 +13,7 @@ const lessonsContent = {
       "and making sure your notes are kept in privately.\n",
   },
   "2": {
-    title: "Why is it called TypeTech?",
+    title: "TypeTech Q&A",
     content:
         "Why is it called TypeTech?\n\n" +
       "TypeTech is originally a hardware detecting app,\n" +
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
   container: { 
     flex: 1, 
     padding: 20, 
-    backgroundColor: "rgba(26, 26, 26, 0.53)" 
+    backgroundColor: "rgba(26, 26, 26, 0.6)" 
   },
   title: {
     fontSize: 50,
@@ -67,14 +67,16 @@ const styles = StyleSheet.create({
     marginTop: 40,
   },
   content: {
+    marginLeft: 450,
     alignItems: "center",
-    justifyContent: "center",
+    alignContent: "center",
     fontSize: 16,
-    lineHeight: 26,
+    lineHeight: 30,
     color: "#fff",
     backgroundColor: "rgba(26, 26, 26, 0.53)",
-    padding: 16,
+    padding: 20,
     borderRadius: 12,
     borderColor: "#ffffffff",
+    width: 400,
   },
 });

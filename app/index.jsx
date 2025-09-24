@@ -41,10 +41,10 @@ const Home = () => {
         <Text style={styles.cardText}>View Tech Notes</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.card} onPress={() => router.push("/goals/create")}>
-        <Text style={styles.cardText}>Type Tech Notes</Text>
+        <Text style={styles.cardText}>⇾  Type Tech Notes  ⇽</Text>
       </TouchableOpacity>
 
-      {/* Lessons Section */}
+      {/* About Section */}
       <TouchableOpacity style={styles.card} onPress={() => router.push("/lessons")}>
         <Text style={styles.cardText}>About TypeTech</Text>
       </TouchableOpacity>
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
   },
   card: {
     width: "100%",
-    backgroundColor: "rgba(28, 27, 37, 0.53)",
+    backgroundColor: "rgba(28, 27, 37, 0.69)",
     padding: 18,
     borderRadius: 12,
     marginVertical: 10,
@@ -97,6 +97,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.3,
     shadowRadius: 4,
+    width: 400,
   },
   cardText: {
     color: "#fff",
