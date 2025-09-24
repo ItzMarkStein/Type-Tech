@@ -8,7 +8,11 @@ My Name is **Mark Bandolon**, I'm a 3rd Year College Student in _Consolatrix Col
 
 ----> My Badges <-----
 
-![Image](https://github.com/user-attachments/assets/f77d790a-e55d-4113-a7c0-7f004d6b9b85) ![Image](https://github.com/user-attachments/assets/b6c2f02f-da4e-42cf-8eb6-75b2fe57b3ae) ![Image](https://github.com/user-attachments/assets/a332c163-1ab2-42c8-8afb-7beb73316450)
+![Image](https://github.com/user-attachments/assets/a2034e09-eb02-4442-9a21-5633ee0f287d) ![Image](https://github.com/user-attachments/assets/51e19462-83d9-4ca1-813c-944c80f5a115) ![Image](https://github.com/user-attachments/assets/876dc4fd-ca59-4702-acac-455cf126b6af)
+
+
+
+
 
 
 
