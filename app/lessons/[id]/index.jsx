@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     marginTop: 40,
   },
   content: {
-    marginLeft: 450,
+    marginLeft: 10,
     alignItems: "center",
     alignContent: "center",
     fontSize: 16,
